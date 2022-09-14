@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_alphabet : this function would print the alphabet
+ * print_alphabet : this function would print the alphabet a to z
  * return : 0
  */
 
