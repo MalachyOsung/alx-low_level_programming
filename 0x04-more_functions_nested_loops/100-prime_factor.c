@@ -1,23 +1,25 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - print out a square
+ * main - checks for a digit (0 through 9)
  *
- * @size: size of the square
- * Return: void
+ * Return: Always 0.
  */
-void print_square(int size)
+int main(void)
 {
-	int i, j;
+	long x, y;
 
-	if (size <= 0)
-		_putchar('\n');
+	x = 612852475143;
 
-	for (i = 0; i < size; i++)
+	for (y = 2; x > y; y++)
 	{
-		for (j = 0; j < size; j++)
-			_putchar('#');
-
-		_putchar('\n');
+		while (x % y == 0)
+		{
+			x = x / y;
+		}
 	}
+
+	printf("%lu", y);
+	putchar('\n');
+	return (0);
 }
