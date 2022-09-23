@@ -16,31 +16,30 @@ char *leet(char *str)
 		str[i] = transform(str[i]);
 		i++;
 	}
-	return (str);
-}
+	ret#include "main.h"
 
 /**
- * transform - helper function to map a letter with it's leet encoding
- * @x: char to be encoded
+ * leet - Function that reverses the content of an array of integers.
  *
- * Return: the encoded char
+ * @str: s is the array
+ *
+ * Return: Always 0.
  */
-
-char transform(char x)
+char *leet(char *str)
 {
-	char mapping_low[8] = {'o', 'l', '\0', 'e', 'a', '\0', '\0', 't'};
-	char mapping_upper[8] = {'O', 'L', '\0', 'E', 'A', '\0', '\0' 'T'};
-	int i = 0;
-	char replacement = x;
+	int i = 0, k;
+	char s[] = "aAeEoOtTlL";
+	char s1[] = "4433007711";
 
-	while (i < 8)
+	for (; str[i] != '\0'; i++)
 	{
-		if (x == mapping_low[i] || x == mapping_upper[i])
+		for (k = 0; k <= 9; k++)
 		{
-			replacement = i + '0';
-			break;
+			if (s[k] == str[i])
+			{
+				str[i] = s1[k];
+			}
 		}
-		i++;
 	}
-	return (replacement);
+	return (str);
 }
