@@ -1,4 +1,4 @@
-103-find_loop.c#include "lists.h"
+#include "lists.h"
 
 /**
  * find_listint_loop - Finds the loop contained in
